@@ -6,7 +6,6 @@ npm install
 npm start
 ```
 
-![WeatherApp](https://github.com/erenberkaydinc/WeatherApp/blob/master/assets/splash.png)
+<img src="https://github.com/erenberkaydinc/WeatherApp/blob/master/assets/splash.png" width="400" height="750" />
 
-Preview of App
-![WeatherApp](https://github.com/erenberkaydinc/WeatherApp/blob/master/assets/app.gif)
+<img src="https://s9.gifyu.com/images/app.gif" width="400" height="750" />
