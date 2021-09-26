@@ -97,92 +97,86 @@ export default function App() {
 
 
   
-   if(state.isLoaded){
+  if(state.isLoaded){
      
-     return(
+    return(
 
-      <SafeAreaView style={styles.container} >
-      <StatusBar barStyle='dark-content' />
-      <ImageBackground
-      source={require('./assets/bc.jpg')} resizeMode="cover"
-      style={{
-        width: Dimensions.get('screen').width,
-        height: Dimensions.get('window').height,
-        flex:1,
-        justifyContent:'flex-start',
-        alignItems:'center',
-        opacity:.8
-      }}
-      >
-     <View style={{justifyContent:'center',alignItems:'center'}}>
-     
-      <Image 
-      style={{
-        width:120,
-        height:120,
-        
-      }}
-      source={{uri:"https://openweathermap.org/img/w/"+state.icon+".png"}}
-      />
-      <Text style={styles.name} >{state.name}</Text>
-      <Text style={styles.status} >{state.status}</Text>
-      <Text style={styles.paragraph} >{state.desc}</Text>
-      <Text style={styles.temp} >{state.temp}℃</Text>
-
-       <TextInput 
-       data={input}
-       style={styles.input}
-       placeholder='Enter the state/city name ex: California'
-       onChangeText={(input) => changeInput(input)}
-       />
-         <TouchableOpacity
-            onPress={
-              () => getWeatherData()
-            }
-            
-            >
-              <View 
-              style={styles.customButton}
-              >
-                <MaterialIcons name="check-circle" size={40} color="black" 
-                style={{marginRight:5}}
-                />
-
-                <Text
-                
-                >Save</Text>
-              </View>
-            </TouchableOpacity>
-      </View>
-
-      
+     <SafeAreaView style={styles.container} >
+     <ImageBackground
+     source={require('./assets/bc.jpg')} resizeMode="cover"
+     style={{
+       width: Dimensions.get('screen').width,
+       height: Dimensions.get('window').height,
+       flex:1,
+       justifyContent:'flex-start',
+       alignItems:'center',
+       opacity:.8
+     }}
+     >
+    <View style={{justifyContent:'center',alignItems:'center'}}>
+    
+     <Image 
+     style={{
+       width:120,
+       height:120,
        
-      </ImageBackground>
-      </SafeAreaView>
-     );
-      }
+     }}
+     source={{uri:"https://openweathermap.org/img/w/"+state.icon+".png"}}
+     />
+     <Text style={styles.name} >{state.name}</Text>
+     <Text style={styles.status} >{state.status}</Text>
+     <Text style={styles.paragraph} >{state.desc}</Text>
+     <Text style={styles.temp} >{state.temp}℃</Text>
+
+      <TextInput 
+      data={input}
+      style={styles.input}
+      placeholder='Enter the state/city name ex: California'
+      onChangeText={(input) => changeInput(input)}
+      />
+        <TouchableOpacity
+           onPress={() => getWeatherData()}
+           
+           >
+             <View 
+             style={styles.customButton}
+             >
+               <MaterialIcons name="check-circle" size={40} color="black" 
+               style={{marginRight:5}}
+               />
+
+               <Text
+               
+               >Save</Text>
+             </View>
+           </TouchableOpacity>
+     </View>
+
+     
       
-      else {
-        return(
+     </ImageBackground>
+     </SafeAreaView>
+    );
+     }
+     
+     else {
+       return(
 
-      <SafeAreaView style={{justifyContent:'center',alignItems:'center'}}>
-      <Text style={{
-        justifyContent:'center',alignItems:'center',
-        margin: 8,
-    fontSize: 15,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color:'black',
-    textShadowColor: 'white',
-  textShadowOffset: {width: -1, height: 1},
-  textShadowRadius: 5
-      }} >LOADING....</Text>
-      
-      </SafeAreaView>
-        )
-      }
-
-
+     <SafeAreaView style={{justifyContent:'center',alignItems:'center'}}>
+     <Text style={{
+       margin: 8,
+   fontSize: 15,
+   fontWeight: 'bold',
+   textAlign: 'center',
+   color:'black',
+   textShadowColor: 'white',
+ textShadowOffset: {width: -1, height: 1},
+ textShadowRadius: 5
+     }} >LOADING....</Text>
+     
+     </SafeAreaView>
+       )
+     }
     
 
     

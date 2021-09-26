@@ -1,11 +1,12 @@
-# Sample Snack app
+# Simple Weather App
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+```
+Download the files as a zip and then 
+npm install
+npm start
+```
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo-cli](https://docs.expo.io/get-started/installation).
+![WeatherApp](https://github.com/erenberkaydinc/WeatherApp/blob/master/assets/splash.png)
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
-
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io/c/snack).
-
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+Preview of App
+![WeatherApp](https://github.com/erenberkaydinc/WeatherApp/blob/master/assets/app.gif)
