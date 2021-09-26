@@ -1,6 +1,5 @@
 import  React,{useState,useEffect} from 'react';
-import { StatusBar,Text, View, StyleSheet , Button,Image, TextInput,Dimensions,SafeAreaView,TouchableOpacity,ImageBackground,Alert} from 'react-native';
-import Constants from 'expo-constants';
+import { StatusBar,Text, View, StyleSheet ,Image, TextInput,Dimensions,SafeAreaView,TouchableOpacity,ImageBackground,Alert} from 'react-native';
 
 import {MaterialIcons} from '@expo/vector-icons'
 
@@ -57,8 +56,8 @@ export default function App() {
   const getWeatherDataV2 = () => {
     
       if(input == 'california') {
+
         return(
-           //fetch internetten url ile veri çekmek için kullanılır
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=california&units=metric&appid=e059ad014bac773db26b5c128634c23b`)
       .then(data => data.json())
       .then(results => setState({
@@ -75,7 +74,7 @@ export default function App() {
       }
       else {
         return(
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=e059ad014bac773db26b5c128634c23b`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=e059ad014bac773db26b5c128634c23b`)
       .then(data => data.json())
       .then(results => setState({
         name:results.name,
@@ -102,6 +101,7 @@ export default function App() {
     return(
 
      <SafeAreaView style={styles.container} >
+      <StatusBar barStyle="dark-content" />
      <ImageBackground
      source={require('./assets/bc.jpg')} resizeMode="cover"
      style={{
@@ -163,6 +163,7 @@ export default function App() {
        return(
 
      <SafeAreaView style={{justifyContent:'center',alignItems:'center'}}>
+       <StatusBar barStyle="dark-content" />
      <Text style={{
        margin: 8,
    fontSize: 15,
